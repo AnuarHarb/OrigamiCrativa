@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" ng-app='origamiCreativa'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Origami Creativa</title>
+</head>
+<body>
+  <home-Origami></home-Origami>
+
+
+  <!-- Angualr 1.5.6 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <!-- Modulo Principal de Angualr -->
+  <script src="app/app.js"></script>
+  <!-- Angular Components -->
+  <script src="app/components/homeOrigami/homeOrigami.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA-hCtz9XBkYvsDTXiYNTzPGkwjc-beh9U",
+      authDomain: "origami-82135.firebaseapp.com",
+      databaseURL: "https://origami-82135.firebaseio.com",
+      storageBucket: "origami-82135.appspot.com",
+      messagingSenderId: "674979884572"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<h1>Home</h1>
+<form action="" ng-submit='$ctrl.subir()'>
+  <input type="text" ng-model="$ctrl.nombre">
+  <input type="text" ng-model="$ctrl.cliente">
+  <input type="text" ng-model="$ctrl.categoria">
+  <button type='submit'>Subir Proyecto Nuevo</button>
+</form>
+
+<section ng-repeat='proyecto in $ctrl.proyectos'>
+  <h2>{{proyecto.nombre}}</h2>
+  <p>{{proyecto.cliente}}</p>
+  <p>{{proyecto.categoria}}</p>
+  <hr>
+</section>
