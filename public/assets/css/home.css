@@ -1,0 +1,9 @@
+.home-background {
+  background-image: url('../img/homeBackgrounds/origami.gif');
+  background-position: center;
+  background-size: cover;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
