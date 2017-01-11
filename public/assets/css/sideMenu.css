@@ -1,17 +1,16 @@
 .side-menu {
   left: 50px;
   list-style: none;
-  top: 150px;
+  top: 90px;
   position: fixed;
 }
 
 .side-menu li {
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .side-menu a {
   color: #cdcdce;
-  font-family: arial;
   font-size: 10px;
   letter-spacing: 1px;
   text-decoration: none;

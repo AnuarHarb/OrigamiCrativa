@@ -1,8 +1,28 @@
 @import 'home.css';
 @import 'sideMenu.css';
+@import 'navBar.css';
+@import 'contacto.css';
+@import 'redesSociales.css';
 
+@font-face {
+    font-family: 'corporative-black';
+    src: url('../fonts/CorporativeAltBlack.otf');
+}
+@font-face {
+    font-family: 'corporative-bold';
+    src: url('../fonts/CorporativeAltBBold.otf');
+}
+@font-face {
+    font-family: 'corporative-book';
+    src: url('../fonts/CorporativeAltBook.otf');
+}
+@font-face {
+    font-family: 'corporative-medium';
+    src: url('../fonts/CorporativeAltMedium.otf');
+}
 
 * {
   margin: 0;
   padding : 0;
+  font-family: 'corporative-medium';
 }

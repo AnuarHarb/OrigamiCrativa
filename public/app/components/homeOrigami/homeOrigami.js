@@ -15,15 +15,19 @@
 
     // Lista de fondos posibles junto con su color de letra y hover
     home.backgrounds = [
-      { image: 'o.gif', color: '#fff', hover: '#4f4f4f' },
-      { image: 'r.gif', color: '#000', hover: '#ff0033' },
-      { image: 'i.gif', color: '#cdcdce', hover: '#000' },
-      { image: 'g.gif', color: '#711f71', hover: '#fff' },
-      { image: 'a.gif', color: '#00ffff', hover: '#fff' },
-      { image: 'i.gif', color: '#cdcdce', hover: '#000' },
-      { image: 'origami.gif', color: '#cdcdce', hover: '#000' },
-      { image: 'operadora.gif', color: '#fff', hover: '#fff' },
-      { image: 'zone.gif', color: '#ff0033', hover: '#000' },
+      { image: 'o.gif', color: '#ff3399', hover: '#fff', logo: 'white' },
+      { image: 'r.gif', color: '#000', hover: '#ff0033', logo: 'gray' },
+      { image: 'i.gif', color: '#666', hover: '#ffff00', logo: 'gray' },
+      { image: 'g.gif', color: '#00ff00', hover: '#fff', logo: 'gray' },
+      { image: 'a.gif', color: '#00ffff', hover: '#fff', logo: 'white' },
+      { image: 'm.gif', color: '#666', hover: '#fff', logo: 'white' },
+      { image: 'i2.gif', color: '#fff', hover: '#ffff00', logo: 'white' },
+      { image: 'dino.gif', color: '#fff', hover: '#ffff00', logo: 'white' },
+      { image: 'maps.gif', color: '#33ccff', hover: '#fff', logo: 'gray' },
+      { image: 'origami.gif', color: '#ccc', hover: '#000', logo: 'gray' },
+      // { image: 'operadora.gif', color: '#fff', hover: '#fff', logo: 'white' },
+      { image: 'punk.gif', color: '#ff33ff', hover: '#000', logo: 'gray' },
+      { image: 'zone.gif', color: '#ff0033', hover: '#000', logo: 'gray' },
     ];
 
     // Funcion para tener un fondo aleatorio y que cambie cada cierto tiempo
@@ -31,7 +35,10 @@
       // Variable que toma el valor de un objeto de la lista home.backgrounds aleatoriamente.
       var random = home.backgrounds[Math.floor(Math.random()*home.backgrounds.length)]
 
+      // El Fondo cambia utilizando gifs de la lista home.backgrounds
       $('.home-background').css("background-image", "url(/assets/img/homeBackgrounds/" + random.image + ")");
+
+      // Menu - El color cambia segun el fondo ¿Podrían combinarse el color y hover de menu con redes sociales?
       $('.side-menu a').css("color", random.color );
       $('.side-menu a').mouseover(function(){
         $(this).css("color", random.hover );
@@ -39,7 +46,22 @@
       $('.side-menu a').mouseleave(function(){
         $(this).css("color", random.color );
       })
+
+      // Redes Sociales - El color cambia segun el fondo
+      $('.redes-sociales li i').css("color", random.color );
+      $('.redes-sociales li i').mouseover(function(){
+        $(this).css("color", random.hover );
+      })
+      $('.redes-sociales li i').mouseleave(function(){
+        $(this).css("color", random.color );
+      })
+
+      // Logo - Hay 3 variantes, gris y blanco
+      $('.nav-bar img').attr('src', '/assets/img/origami' + random.logo + '.png')
+
+      // La función se llama a si misma para hacer un loop infinito cada 5 segundos
       setTimeout(home.cambiaFondo, 5000);
+
     };
     setTimeout(home.cambiaFondo, 5000);
   };

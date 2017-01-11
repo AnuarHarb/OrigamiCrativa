@@ -1,0 +1,28 @@
+.redes-sociales {
+  position: absolute;
+  right: 20px;
+  top: 40%;
+  list-style: none;
+}
+.redes-sociales li {
+  margin-top: 10px;
+  color: #cdcdce;
+}
+.redes-sociales li:hover {
+  cursor: pointer;
+}
+@media screen and (max-width:450px) {
+  .redes-sociales {
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    top: 90%;
+    width: 100%;
+
+  }
+  .redes-sociales li {
+    color: #cdcdce;
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
